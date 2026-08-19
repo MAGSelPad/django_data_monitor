@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 import requests
 from django.conf import settings
 
+@login_required
 def index(request):
     """Renderiza la página principal del dashboard."""
     
