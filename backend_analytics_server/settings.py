@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-dzmp8%4+!2w5nth!=fdx_f-ajtf&d5a73%zr2i2a4jd-&pq5yu"
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -157,4 +157,4 @@ MAILERS = {
 }
 
 # External APIs
-API_URL = 'https://jsonplaceholder.typicode.com/posts'
+API_URL = 'https://mags.pythonanywhere.com/landing/api/index/'
